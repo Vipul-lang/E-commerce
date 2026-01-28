@@ -16,22 +16,22 @@ const Header = () => {
           Navbar
         </a>
 
-        <ul className="navbar-nav">
+        {/* <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link active" to="/">
               Home
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       <div className="nav-right">
-        <input
+        {/* <input
           className="search-input"
           type="search"
           placeholder="Search for products"
         />
-        <button className="search-btn">Search</button>
+        <button className="search-btn">Search</button> */}
 
         <div className="cart-box">
           <Link to="/cart">
