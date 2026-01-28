@@ -13,7 +13,7 @@ const Header = () => {
     <nav className="navbar">
       <div className="nav-left">
         <a className="navbar-brand" href="#">
-          Navbar
+          Shopify
         </a>
 
         {/* <ul className="navbar-nav">
