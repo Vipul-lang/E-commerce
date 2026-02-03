@@ -30,18 +30,22 @@ const Header = () => {
       </div>
 
       <div className="nav-right">
-        <input
+        {/* <input
           className="search-input"
           type="search"
           placeholder="Search Products, Brands.."
           onChange={(e)=>setsearchInput(e.target.value)}
           
         />
+<<<<<<< HEAD
         
         
         
 
         {/* <button className="search-btn">Search</button> */}
+=======
+        <button className="search-btn">Search</button> */}
+>>>>>>> fde9756bae279d8a69b5b7578c3efc7b0c85ac76
 
         <div className="cart-box">
           <Link to="/cart">
