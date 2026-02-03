@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Cart from "./Cart";
 import CartContext from "../context/Context";
 import { Link } from "react-router";
 
+
+
 const Header = () => {
-  const { carts } = useContext(CartContext);
-  
+  const { setsearchInput,carts } = useContext(CartContext);
+    // console.log(setsearchInput);
+ 
+
 
   
 
@@ -13,25 +17,31 @@ const Header = () => {
     <nav className="navbar">
       <div className="nav-left">
         <a className="navbar-brand" href="#">
-          Navbar
+          Shopify
         </a>
 
-        <ul className="navbar-nav">
+        {/* <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link active" to="/">
               Home
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       <div className="nav-right">
         <input
           className="search-input"
           type="search"
-          placeholder="Search for products"
+          placeholder="Search Products, Brands.."
+          onChange={(e)=>setsearchInput(e.target.value)}
+          
         />
-        <button className="search-btn">Search</button>
+        
+        
+        
+
+        {/* <button className="search-btn">Search</button> */}
 
         <div className="cart-box">
           <Link to="/cart">
@@ -45,6 +55,6 @@ const Header = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Header;

@@ -27,7 +27,7 @@ const ProjectDetails = () => {
     <>
       <div>
         ProjectDetails
-        <Link to={"/"}>
+        <Link to="/">
           <span> Back to All products</span>
         </Link>
         <div className="product-card">
@@ -37,10 +37,12 @@ const ProjectDetails = () => {
 
           <div className="product-details">
             <h2>{product.title}</h2>
-            <p className="price">{product.price}</p>
+            <p className="price">${product.price}</p>
             <p className="description">{product.description}</p>
-            <div className="rating">{product.rating?.rate}</div>
-            <div className="price">{product.rating?.count}</div>
+            <div className="rating">
+              <p>Rating⭐ {product.rating?.rate}/5</p>
+            </div>
+            {/* <div className="price">{product.rating?.count}</div> */}
             <button className="btn">Add to Cart</button>
           </div>
         </div>

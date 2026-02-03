@@ -5,13 +5,16 @@ import Cart from './components/Cart'
 import Header from './components/Header'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import ProjectDetails from './components/ProductDetails'
-
+import { useState } from 'react'
 
 
 function App() {
+
+  const [searchInput,setsearchInput]=useState('')
+
   return (
     
-    // <ContextProvider>
+    <ContextProvider>
       <BrowserRouter>
       <Header/>
       <Routes>
@@ -20,7 +23,7 @@ function App() {
       <Route path='/products/:id' element={<ProjectDetails/>}/>
       </Routes>
       </BrowserRouter>
-    // </ContextProvider>
+    </ContextProvider>
     
   )
 }
